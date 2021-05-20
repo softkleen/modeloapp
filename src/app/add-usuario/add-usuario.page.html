@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novo Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <!-- campo nome -->
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+   <!-- campo email -->
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <!-- campo email -->
+    <ion-item>
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input type="tel" [(ngModel)]="telefone"></ion-input>
+    </ion-item>
+       <!-- campo Cidade -->
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input type="text" [(ngModel)]="cidade"></ion-input>
+  </ion-item>
+   <!-- campo de CPF -->
+  <ion-item>
+    <ion-label position="floating">CPF</ion-label>
+    <ion-input type="number" [(ngModel)]="cpf"></ion-input>
+  </ion-item>
+   <!-- campo envio de arquivo -->
+  <ion-item>
+    <ion-label position="stacked">Envio de documento</ion-label>
+    <ion-input type="file"></ion-input>
+  </ion-item>
+  {{nome}}
+  <ion-button *ngIf="id<1"  color="success" expand="block" (click)="cadastrar()">
+    Adicionar
+  </ion-button>
+  <ion-button  *ngIf="id>0"  color="primary" expand="block" (click)="editar()">
+    Atualizar
+  </ion-button>
+</ion-content>
